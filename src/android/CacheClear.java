@@ -34,6 +34,7 @@ public class CacheClear extends CordovaPlugin {
                 try {
                     // clear the cache
                     self.webView.clearCache(true);
+                    self.clearApplicationData();
                     // send success result to cordova
                     PluginResult result = new PluginResult(PluginResult.Status.OK);
                     result.setKeepCallback(false);
